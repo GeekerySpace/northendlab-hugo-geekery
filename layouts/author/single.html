@@ -1,9 +1,10 @@
 {{ define "main" }}
+{{- $contentGridSpan := default 12 .Site.Params.contentArea.gridSpan -}}
 
 <section class="section pb-0">
   <div class="container">
     <div class="row">
-      <div class="col-lg-8 mx-auto text-center block shadow">
+      <div class="col-lg-{{ $contentGridSpan }} mx-auto text-center{{ if lt $contentGridSpan 12 }} block shadow{{ end }}">
         <img src="{{ .Params.Image | relURL }}" alt="" class="img-fluid d-block mx-auto rounded-circle mb-4">
         <h4>{{ .Title | markdownify }}</h4>
         <div class="content">
@@ -18,9 +19,9 @@
 <section class="section">
   <div class="container">
     <div class="row">
-      <div class="col-lg-8 mx-auto px-0">
+      <div class="col-lg-{{ $contentGridSpan }} mx-auto px-0">
         <h2 class="mb-4">Post by author</h2>
-        <div class="bg-white shadow block">
+        <div class="bg-white{{ if lt $contentGridSpan 12 }} shadow block{{ end }}">
           {{ $name:= .Title }}
           {{ range where .Site.RegularPages "Params.author" $name }}
           <article class="mb-5">

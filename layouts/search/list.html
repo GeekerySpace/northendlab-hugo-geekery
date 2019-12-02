@@ -1,9 +1,10 @@
 {{ define "main" }}
+{{- $contentGridSpan := default 12 .Site.Params.contentArea.gridSpan -}}
 
 <section class="section">
   <div class="container">
     <div class="row justify-content-center">
-      <div class="col-lg-8">
+      <div class="col-lg-{{ $contentGridSpan }}">
         <h2>Search result for
           <span class="text-primary">
             <script>
@@ -13,7 +14,7 @@
             </script>
           </span>
         </h2>
-        <div class="block shadow">
+        <div class="block{{ if lt $contentGridSpan 12 }} shadow{{ end }}">
           <div id="search-results"></div>
           <script id="search-result-template" type="text/x-js-template">
             <div class="py-4 border-bottom" id="summary-${key}">

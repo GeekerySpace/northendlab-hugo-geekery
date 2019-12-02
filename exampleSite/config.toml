@@ -119,3 +119,8 @@ link = "#"
 [[params.social]]
 icon = "ti-linkedin" # themify icon pack https://themify.me/themify-icons
 link = "#"
+
+######################### Layout/Style Parameters ###########################
+
+[params.contentArea]
+gridSpan = 8 # the N in col-lg-N; defaults to 12
