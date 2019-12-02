@@ -1,7 +1,7 @@
 ############################ Default configuration #########################
 baseURL = "https://examplesite.com/"
 languageCode = "en-us"
-# site title 
+# site title
 title = "Northendlab | Blog Template"
 # theme
 theme = "northendlab-hugo"
@@ -68,7 +68,7 @@ home = "Home"
 # logo
 logo = "images/logo.svg"
 # meta data
-author = "Themefisher"
+author = "GeekerySpace Themefisher"
 description = "This is meta description"
 # google analitycs ID
 googleAnalitycsID = "Your ID"
