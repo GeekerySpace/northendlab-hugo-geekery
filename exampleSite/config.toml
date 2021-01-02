@@ -122,5 +122,5 @@ link = "#"
 
 ######################### Layout/Style Parameters ###########################
 
-[params.contentArea]
-gridSpan = 8 # the N in col-lg-N; defaults to 12
+# [params.contentArea]
+# gridSpan = 8 # the N in col-lg-N; defaults to 12
